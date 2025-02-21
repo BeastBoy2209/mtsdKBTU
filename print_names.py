@@ -1,0 +1,2 @@
+print("Timur")
+print("Alikhan")
