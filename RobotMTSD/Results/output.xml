@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-29T11:38:02.647762" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="/Users/beasty/Desktop/mtsdKBTU/RobotMTSD/TestCases/login_test.robot">
+<test id="s1-t1" name="User Login Successfully" line="14">
+<kw name="Open Browser To Homepage" owner="CommonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:02.742167" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-29T11:38:02.742068" elapsed="3.950428"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-29T11:38:06.693419" elapsed="1.050443"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.744117" elapsed="0.000909"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://a[@id='nava']</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.745097" elapsed="0.006321"/>
+</kw>
+<status status="PASS" start="2025-03-29T11:38:02.741766" elapsed="5.009766"/>
+</kw>
+<kw name="Click Login Link" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.751912" elapsed="0.008043"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.760048" elapsed="0.008417"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:07.768720" level="INFO">Clicking element 'id:login2'.</msg>
+<arg>${LOGIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.768581" elapsed="0.023700"/>
+</kw>
+<status status="PASS" start="2025-03-29T11:38:07.751770" elapsed="0.040609"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-29T11:38:08.793318" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-29T11:38:07.792504" elapsed="1.001046"/>
+</kw>
+<kw name="Complete Login Process" owner="LoginPage">
+<kw name="Enter Login Credentials" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.795418" elapsed="0.016313"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.811830" elapsed="0.014404"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:08.826459" level="INFO">Typing text 'Bochka123' into text field 'id:loginusername'.</msg>
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.826322" elapsed="0.073633"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.900086" elapsed="0.011844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:08.912207" level="INFO">Typing text '2209' into text field 'id:loginpassword'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.912058" elapsed="0.021919"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-29T11:38:08.794821" elapsed="0.139220"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.934270" elapsed="0.007898"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:08.942373" level="INFO">Clicking button 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.942257" elapsed="0.025228"/>
+</kw>
+<status status="PASS" start="2025-03-29T11:38:08.934138" elapsed="0.033438"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-03-29T11:38:08.794081" elapsed="0.173522"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-29T11:38:11.968568" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-29T11:38:08.967712" elapsed="3.000982"/>
+</kw>
+<kw name="Verify User Is Logged In" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WELCOME_USER}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-29T11:38:11.969318" elapsed="0.015138"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-29T11:38:11.992615" level="INFO">Element 'id:nameofuser' contains text 'Welcome Bochka123'.</msg>
+<arg>${WELCOME_USER}</arg>
+<arg>Welcome ${username}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-29T11:38:11.984577" elapsed="0.008090"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-03-29T11:38:11.968991" elapsed="0.023725"/>
+</kw>
+<kw name="Close Browser Session" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-29T11:38:11.993021" elapsed="0.080227"/>
+</kw>
+<status status="PASS" start="2025-03-29T11:38:11.992891" elapsed="0.080423"/>
+</kw>
+<status status="PASS" start="2025-03-29T11:38:02.741482" elapsed="9.331907"/>
+</test>
+<doc>Test case for user login functionality</doc>
+<status status="PASS" start="2025-03-29T11:38:02.648500" elapsed="9.425192"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
