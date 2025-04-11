@@ -1,0 +1,9 @@
+Test 1 - Check title:
+Open https://www.demoblaze.com
+Verify that the page title contains the word "STORE"
+
+Test 2 - Click product:
+Open https://www.demoblaze.com
+Wait for "Samsung galaxy s6" product to appear
+Click on the "Samsung galaxy s6" product
+Verify that the product detail page shows "Samsung galaxy s6" in the title
